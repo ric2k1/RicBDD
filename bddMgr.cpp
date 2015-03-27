@@ -93,10 +93,6 @@ BddMgr::reset()
       delete (*bi).second;
    _uniqueTable.reset();
    _computedTable.reset();
-   
-   _isFixed = false;
-   _initState = _tr = _tri = size_t(0);
-   _reachStates.clear();
 }
 
 // [Note] Remeber to check "isNegEdge" when return BddNode!!!!!

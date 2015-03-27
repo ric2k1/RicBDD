@@ -13,8 +13,6 @@
 
 using namespace std;
 
-class BddNodeInt;
-
 //--------------------
 // Define Hash classes
 //--------------------
@@ -24,7 +22,7 @@ class BddNodeInt;
 // class HashKey
 // {
 // public:
-//    BddHashKey() {}
+//    HashKey() {}
 // 
 //    size_t operator() () const { return 0; }
 // 

@@ -103,19 +103,6 @@ public:
    int evalCube(const BddNode& node, const string& vector) const;
    bool drawBdd(const string& nodeName, const string& dotFile) const;
 
-   // For prove
-   void buildPInitialState();
-   void buildPTransRelation();
-   void buildPImage( int level );
-   void runPCheckProperty( const string &name, BddNode property );
-   bool isPFixed() const { return _isFixed; }
-   BddNode getPInitState() const { return _initState; }
-   BddNode getPTr() const { return _tr; }
-   BddNode getPTri() const { return _tri; }
-   BddNode getPReachState() const { 
-      return ( _reachStates.empty() ) ? _initState : _reachStates.back(); }
-   void resetProof() {}
-
 private:
    // level = 0: const 1;
    // level = 1: lowest input variable
@@ -126,13 +113,6 @@ private:
 
    BddArr           _bddArr;
    BddMap           _bddMap;
-
-   // For prove
-   bool             _isFixed;
-   BddNode          _initState;
-   BddNode          _tr;
-   BddNode          _tri;
-   vector<BddNode>  _reachStates;
 
    void reset();
    bool checkIteTerminal(const BddNode&, const BddNode&, const BddNode&,
