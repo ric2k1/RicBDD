@@ -9,6 +9,7 @@
 #include <sstream>
 #include <fstream>
 #include <cassert>
+#include <cstdlib>
 #include "bddNode.h"
 #include "bddMgr.h"
 
